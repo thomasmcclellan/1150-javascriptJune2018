@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Stuff</title>
+  </head>
+  <body>
+    <p id="testParagraph">Sample Text</p>
+    <p class="sampleClass">This paragraph has the class of 'sampleClass'.</p>
+
+    <button id="clickThisButton" style="float: right;">CLICK ME!!</button>
+
+    <label for="nameInput">Enter Your Name:</label>
+    <input type="text" id="nameInput" placeholder="Brandon Coflin">
+
+    <script>
+      document.getElementById('testParagraph').style.color = 'blue';
+      // console.log(document.getElementById('testParagraph').style.color);
+
+      console.log(document.querySelectorAll('p'));
+
+      document.querySelectorAll('p')[0].innerHTML = '<i>My text has changed!!!</i>';
+
+      document.getElementById('clickThisButton').addEventListener('click', (details) => {
+        if (details.target.style.backgroundColor == 'red') {
+          details.target.style.backgroundColor = 'blue';
+        } else {
+        details.target.style.backgroundColor = 'red';
+        }
+      });
+
+      document.getElementById('nameInput').addEventListener('keyup', e => {
+        console.log(e.target.value);
+        console.log(document.getElementsByTagName('p'));
+        if (e.target.value == '') {
+        document.getElementsByTagName('p')[1].innerText = 'NOTHING HAS BEEN TYPED.';
+        } else {
+          document.getElementsByTagName('p')[1].innerText = `Everyone, say hello to ${e.target.value} right now!`;
+        }
+      });
+    </script>
+  </body>
+</html>

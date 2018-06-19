@@ -1,0 +1,39 @@
+/* body {
+  background-color: lightblue;
+} */
+
+h1 {
+  color: lightgreen;
+  text-align: center;
+}
+
+h3 {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+#truthLie {
+  border: thick solid black;
+  /* border-width: thick;
+  border-style: solid;
+  border-color: black; */
+  /* border-radius: 25em 25em 0 0; */
+  border-radius: 25em;
+  /* border-radius: 100%; */
+  background: gray;
+
+  padding: 0.25em;
+  text-align: center;
+}
+
+.option {
+  border: medium solid black;
+  border-radius: 25em;
+  background: lightgray;
+  text-align: center;
+  width: 30%;
+  display: inline-block;
+}
